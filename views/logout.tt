@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Simple Perl / Dancer 2 Session authentication using YubiKey</title>
+</head>
+
+<body>
+
+<div id="page">
+
+    <div id="content">
+
+        <div id="header">
+            <h1>Simple Perl Session authentication using YubiKey</h1>
+        </div>
+
+        <div id="getting-started">
+            <h2>This example code allows you to create an authenticated session based on a YubiKey.</h2>
+
+            <p>You are now logged out. </p>
+
+            <h3><a href="/">Login</a></h3>
+            <h3><a href="/unprotected">An Unprotected Page</a></h3>
+
+        <div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

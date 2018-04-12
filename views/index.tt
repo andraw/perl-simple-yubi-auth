@@ -1,0 +1,88 @@
+
+<div id="page">
+
+    <div id="content">
+
+        <div id="header">
+          <h1>Perl and Yubi are dancing</h1>
+          <h2>You&rsquo;ve joined the dance floor with Yubi Authentication!</h2>
+        </div>
+
+        <div id="getting-started">
+          <h1>This is a protected Page</h1>
+          <h2>This page is now protected by your YubiKey</h2>
+
+          <h3><a href="#" id="about_env_link">About your application's environment</a></h3>
+
+          <div id="about-content" style="display: none;">
+            <table>
+                 <tbody>
+                 <tr>
+                     <td>Perl version</td>
+                     <td><span class="app-info"><% perl_version %></span></td>
+                 </tr>
+                 <tr>
+                     <td>Dancer2 version</td>
+                     <td><span class="app-info"><% dancer_version %></span></td>
+                 </tr>
+                 <tr>
+                     <td>Backend</td>
+                     <td><span class="app-info"><% settings.apphandler %></span></td>
+                 </tr>
+                 <tr>
+                     <td>Template engine</td>
+                     <td><span class="app-info"><% settings.template %></span></td>
+                 </tr>
+                 <tr>
+                     <td>Logger engine</td>
+                     <td><span class="app-info"><% settings.logger %></span></td>
+                 </tr>
+                 <tr>
+                     <td>Running environment</td>
+                     <td><span class="app-info"><% settings.environment %></span></td>
+                 </tr>
+                 </tbody>
+             </table>
+           </div>
+
+           <h3><a href="#" id="about_credentials_link">About your credentials</a></h3>
+
+           <div id="about-credentials" style="display: none;">
+             <table>
+                 <tbody>
+                 <tr>
+                     <td>Yubi Key ID</td>
+                     <td><span class="app-info"><% session.yubiid %></span></td>
+                 </tr>
+                 <tr>
+                 <td>Username</td>
+                     <td><span class="app-info"><% session.user %></span></td>
+                 </tr>
+                 </tbody>
+             </table>
+           </div>
+
+    <script type="text/javascript">
+    $('#about_env_link').click(function() {
+        $('#about-content').slideToggle('fast', function() {
+            // ok
+        });
+        return false;
+    });
+    </script>
+
+    <script type="text/javascript">
+    $('#about_credentials_link').click(function() {
+        $('#about-credentials').slideToggle('fast', function() {
+            // ok
+        });
+        return false;
+    });
+    </script>
+
+    <h3><a href="/protected">A Protected Page</a></h3>
+
+    <h3><a href="/logout">Logout</a></h3>
+
+    </div>
+</div>

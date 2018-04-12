@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Simple Perl / Dancer 2 Session authentication using YubiKey</title>
+</head>
+
+<body>
+
+<div id="page">
+
+    <div id="content">
+
+        <div id="header">
+            <h1>Simple Perl Session authentication using YubiKey</h1>
+        </div>
+
+        <div id="getting-started">
+            <h2>This example code allows you to create an authenticated session based on a YubiKey.</h2>
+            <p>This code isn't intended to protect the world, but it should work fine for a small
+            service you'd like protected.  The file 'lib/Simple/YubiAuth.pm' needs to be edited and
+            details of the keys you would like to give access to entered.  You will also need to
+            install the <a href="https://github.com/Yubico/yubico-perl-client">yubico-perl-client</a> 
+            library.</p>
+
+            <form action="/login" method="POST">
+
+                <label>YubiKey :</label>
+
+                <input id="yubi_otp" name="yubi_otp" type="password">
+                <input name="submit" type="submit" value="Login">
+
+            </form>
+
+        <div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
